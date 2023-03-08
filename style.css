@@ -3,7 +3,24 @@
 body {
     background-color: ivory;
     font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.6;
 }
+
+/* NAV */
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /*background-color: black;*/
+    margin: 0 auto;
+    max-width: 800px;
+}
+
 
 /* FONTS */
 .wavy-under {
@@ -18,9 +35,14 @@ text-decoration-color: rgb(156, 10, 10);
 text-decoration-thickness: 2px;
 }
 
+::selection {
+    color: rgb(32, 26, 26);
+    background: rgb(240, 240, 130);
+}
+
 /* LINKS */
 
-a, a:active, a:hover, a:visited {
+a:link, a:active, a:hover, a:visited {
     color:rgb(63, 159, 248);
     text-decoration: none;
 }
@@ -31,7 +53,7 @@ a:hover {
 }
 
 /* BUTTONS */
-button {
+.btn {
     background-color: white;
     border: .25rem solid black;
     outline: rgb(241, 185, 185) solid .25rem;
