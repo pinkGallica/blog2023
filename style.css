@@ -1,0 +1,43 @@
+/* GLOBAL */
+
+body {
+    background-color: ivory;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* FONTS */
+.wavy-under {
+    text-decoration-line: underline;
+  text-decoration-color: red;  
+  text-decoration-style: wavy; 
+}
+.dbl-under {
+text-decoration-line: underline;
+text-decoration-style: double;
+text-decoration-color: rgb(156, 10, 10);
+text-decoration-thickness: 2px;
+}
+
+/* LINKS */
+
+a, a:active, a:hover, a:visited {
+    color:rgb(63, 159, 248);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* BUTTONS */
+button {
+    background-color: white;
+    border: .25rem solid black;
+    outline: rgb(241, 185, 185) solid .25rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding: .5rem;
+}
+
+
+/* MEDIA */
