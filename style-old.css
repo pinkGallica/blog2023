@@ -1,0 +1,185 @@
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.6;
+    opacity: 1;
+    background-image:  linear-gradient(#fafafa 1px, transparent 1px), linear-gradient(to right, #fafafa 1px, #ffffff 1px);
+    background-size: 20px 20px;
+    margin: 0;
+}
+
+/* HERO BLURB */
+
+section:first-child p {
+    margin-bottom: 2rem;
+    font-size: small;
+}
+
+.top-info {
+    padding: 0 .5rem;
+    background-color: rgb(200, 242, 255);
+    border-left: 2px solid rgb(73, 61, 65);
+    border-right: 2px solid rgb(73, 61, 65);
+    border-radius: .25rem;
+}
+
+section:first-child h4 {
+    margin: 0;
+}
+
+kbd {
+    background-color: #f0efef;
+    border-radius: .25rem;
+    padding: .125rem;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    margin: 2rem .75rem 0 .75rem;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* NAV */
+.main-nav {
+    background-color: rgb(252, 246, 250);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 1.25rem;
+    gap: 1rem;
+}
+
+ul.main-nav li a:link, ul.main-nav li a:active, ul.main-nav li a:visited {
+    color: rgb(252, 50, 201);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+ul.main-nav li a:hover {
+    background-color: rgb(54, 51, 71);
+    border-radius: .25rem;
+}
+
+.nav-logo {
+    flex-grow: 1;
+}
+
+/* FONTS */
+
+.wavy-under {
+    text-decoration-line: underline;
+    text-decoration-color: red;  
+    text-decoration-style: wavy; 
+}
+
+.dbl-under {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: rgb(156, 10, 10);
+    text-decoration-thickness: 2px;
+}
+
+::selection {
+    color: rgb(32, 26, 26);
+    background: rgb(240, 240, 130);
+}
+
+/* CODE */
+
+code {
+    white-space: normal;
+}
+
+/* POSTS CONTAINER */
+
+.post-bg {
+    background-color: white;
+    border: 1px solid #a0a0a0;
+    border-radius: .25rem;
+    padding: .5rem;
+    margin-bottom: 2rem;
+}
+
+/* POST HEADER */
+
+header > h1 {
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+header > p {
+    padding: 0;
+    margin: 0;
+    font-size: .75rem;
+    border-bottom: 1px dashed black;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+/* Read More */
+.readmore {
+    display: flex;
+    justify-content: center;
+}
+
+a.readmore:link, a.readmore:active, a.readmore:hover, a.readmore:visited {
+    color: rgb(219, 77, 77);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+
+/* LINKS */
+
+a:link, a:active, a:hover, a:visited {
+    color:rgb(63, 159, 248);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* BUTTONS */
+
+.btn {
+    background-color: white;
+    border: .25rem solid black;
+    outline: rgb(241, 185, 185) solid .25rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding: .5rem;
+}
+
+/* FOOTER */
+
+.footer-style {
+    background-color: rgb(254, 255, 203);
+}
+
+.footer-style > p {
+    margin-bottom: 0px;
+}
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 900px) {
+    body {
+      background-color: lightblue;
+    }
+  }
