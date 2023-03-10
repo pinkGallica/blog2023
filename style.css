@@ -1,3 +1,216 @@
+/*
+ Theme Name:   Pink Gallica 2023
+ Theme URI:    https://pinkgallica.com
+ Description:  Custom Theme
+ Author:       Mishi
+ Author URI:   https://pinkgallica.com
+ Version:      2.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         two-columns, right-sidebar, responsive-layout
+ Text Domain:  pinkgallica2023
+*/
+
+/* BASICS */
+* {
+    box-sizing: border-box;
+  }
+
 body {
-    background-color: #eee;
+    background-color: #ffffff;
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.75;
+    margin: 0;
 }
+
+/* NAV */
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 1.25rem;
+    gap: 1rem;
+}
+
+ul.main-nav li a:link, ul.main-nav li a:active, ul.main-nav li a:visited {
+    color: rgb(252, 50, 201);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+ul.main-nav li a:hover {
+    background-color: rgb(54, 51, 71);
+    border-radius: .25rem;
+}
+
+.nav-logo {
+    flex-grow: 1;
+}
+
+/* TEXT & FONTS */
+::selection {
+    color: rgb(32, 26, 26);
+    background: rgb(240, 240, 130);
+}
+
+kbd {
+    background-color: #f0efef;
+    border-radius: .25rem;
+    padding: .125rem;
+}
+
+code {
+    white-space: normal;
+}
+
+/* BLOG HEADINGS */
+header:first-child p {
+    margin: 0;
+    font-size: small;
+    border-bottom: 1px dashed rgb(70, 70, 70);
+}
+header:first-child h1 {
+    margin-bottom: 0;
+}
+
+/*header {
+    border-bottom: 1px dashed rgb(70, 70, 70);
+}*/
+
+
+.container { /* SMALL LAYOUT */
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "main"
+        "section"
+        "aside";
+}
+
+.container-single { /* SMALL LAYOUT */
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "main";
+}
+
+
+/* Sidebar Lists */
+
+aside > ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Read More */
+.readmore {
+    display: flex;
+    justify-content: center;
+}
+
+a.readmore:link, a.readmore:active, a.readmore:hover, a.readmore:visited {
+    color: rgb(219, 77, 77);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* LINKS */
+
+a:link, a:active, a:hover, a:visited {
+    color:rgb(63, 159, 248);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+
+/* CONTAINER */
+.container, .container-single > * {
+    background-color: rgb(221, 221, 221);
+}
+ 
+main {
+grid-area: main;
+}
+section {
+grid-area: section;
+}
+aside {
+grid-area: aside;
+}
+nav {
+grid-area: nav;
+}
+footer {
+grid-area: footer;
+}
+
+.container-padding {
+    padding: 0 1rem;
+}
+
+/* MISC */
+.wp-block-embed-youtube {
+    margin:0 auto;
+}
+
+.youtube-video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+}   
+
+@media screen and (min-width:500px){ 
+    .container {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+        "nav nav"
+        "main aside"
+        "section aside"
+        "footer footer";
+    }
+}
+
+@media (min-width: 960px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas:
+        "nav nav nav"
+        "main main aside"
+        "section section aside"
+        "footer footer footer";
+    }
+  }
+
+  @media screen and (min-width:500px) { 
+    .container-single {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+    }
+}
+@media (min-width: 960px) {
+    .container-single {
+        max-width: 960px;
+        margin: 0 auto;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+    }
+  }
