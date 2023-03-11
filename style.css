@@ -14,14 +14,28 @@
 /* BASICS */
 * {
     box-sizing: border-box;
-  }
+    margin :0;
+    padding :0;
+}
 
-body {
-    background-color: #ffffff;
+html, body {
+    background-color: #eee;
     font-family: "Lucida Console", "Courier New", monospace;
     line-height: 1.75;
-    margin: 0;
 }
+
+p {
+    margin: 1.25rem 0;
+    padding: 0;
+}
+
+#wrapper {
+    max-width: 1040px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    clear: both;
+  }
 
 /* NAV */
 .main-nav {
@@ -49,38 +63,26 @@ ul.main-nav li a:hover {
     flex-grow: 1;
 }
 
-/* TEXT & FONTS */
-::selection {
-    color: rgb(32, 26, 26);
-    background: rgb(240, 240, 130);
+/* GRID */
+.grid, .grid-single > * {
+    background-color: rgb(255, 255, 255);
+}
+ 
+main {
+grid-area: main;
+}
+section {
+grid-area: section;
+}
+aside {
+grid-area: aside;
 }
 
-kbd {
-    background-color: #f0efef;
-    border-radius: .25rem;
-    padding: .125rem;
+.grid-padding {
+    padding: 0 1rem;
 }
 
-code {
-    white-space: normal;
-}
-
-/* BLOG HEADINGS */
-header:first-child p {
-    margin: 0;
-    font-size: small;
-    border-bottom: 1px dashed rgb(70, 70, 70);
-}
-header:first-child h1 {
-    margin-bottom: 0;
-}
-
-/*header {
-    border-bottom: 1px dashed rgb(70, 70, 70);
-}*/
-
-
-.container { /* SMALL LAYOUT */
+.grid { /* Mobile First */
     display: grid;
     gap: 20px;
     grid-template-areas:
@@ -89,37 +91,24 @@ header:first-child h1 {
         "aside";
 }
 
-.container-single { /* SMALL LAYOUT */
+.grid-single { /* Page / Single */
     display: grid;
     gap: 20px;
     grid-template-areas:
-        "main";
-}
-
-
-/* Sidebar Lists */
-
-aside > ul {
-    list-style: none;
-    padding: 0;
+        "section";
 }
 
 /* IMAGES */
 img {
     max-width: 100%;
     height: auto;
+    margin-bottom: -.6rem;
 }
 
-/* Read More */
-.readmore {
-    display: flex;
-    justify-content: center;
-}
-
-a.readmore:link, a.readmore:active, a.readmore:hover, a.readmore:visited {
-    color: rgb(219, 77, 77);
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
+.featured-media img { 
+	max-width: 350px;
+	margin: 0 auto; 
+	border-radius: 1rem;
 }
 
 /* LINKS */
@@ -134,44 +123,35 @@ a:hover {
     text-decoration-thickness: 2px;
 }
 
+/* Older posts */
+.container-oldposts {
+    position: relative;
+  }
+  
+  .bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 325px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: .25rem;
+    padding: .25rem;
+  }
 
-/* CONTAINER */
-.container, .container-single > * {
-    background-color: rgb(221, 221, 221);
-}
- 
-main {
-grid-area: main;
-}
-section {
-grid-area: section;
-}
-aside {
-grid-area: aside;
-}
-nav {
-grid-area: nav;
-}
-footer {
-grid-area: footer;
-}
 
-.container-padding {
-    padding: 0 1rem;
-}
+@media (min-width: 1024px) {
+    .grid {
+        max-width: 1024px;
+        margin: 0 auto;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas:
+        "main main aside"
+        "section section aside"
+    }
+  }
 
-/* MISC */
-.wp-block-embed-youtube {
-    margin:0 auto;
-}
-
-.youtube-video {
-        aspect-ratio: 16 / 9;
-        width: 100%;
-}   
-
-@media screen and (min-width:500px){ 
-    .container {
+  @media screen and (min-width:769px){ 
+    .grid {
         grid-template-columns: 3fr 1fr;
         grid-template-areas:
         "nav nav"
@@ -180,37 +160,3 @@ grid-area: footer;
         "footer footer";
     }
 }
-
-@media (min-width: 960px) {
-    .container {
-        max-width: 960px;
-        margin: 0 auto;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-areas:
-        "nav nav nav"
-        "main main aside"
-        "section section aside"
-        "footer footer footer";
-    }
-  }
-
-  @media screen and (min-width:500px) { 
-    .container-single {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav"
-        "main"
-        "footer";
-    }
-}
-@media (min-width: 960px) {
-    .container-single {
-        max-width: 960px;
-        margin: 0 auto;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "nav"
-        "main"
-        "footer";
-    }
-  }
