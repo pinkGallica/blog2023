@@ -19,7 +19,7 @@
 }
 
 html, body {
-    background-color: #eee;
+    background-color: #ffffff;
     font-family: "Lucida Console", "Courier New", monospace;
     line-height: 1.75;
 }
@@ -30,12 +30,43 @@ p {
 }
 
 #wrapper {
-    max-width: 1040px;
+    max-width: 1280px;
     background-color: white;
     margin: 0 auto;
     padding: 0 1.5rem;
     clear: both;
   }
+
+/* TEXT & FONTS */
+::selection {
+    color: rgb(32, 26, 26);
+    background: rgb(240, 240, 130);
+}
+
+kbd {
+    background-color: #f0efef;
+    border-radius: .25rem;
+    padding: .125rem;
+}
+
+code {
+    white-space: normal;
+}
+
+.small-text {
+    font-size: small;
+    text-align: justify;
+}
+
+/* BLOG HEADINGS */
+header:first-child p {
+    margin: 0;
+    font-size: small;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+header:first-child h1 {
+    margin-bottom: 0;
+}
 
 /* NAV */
 .main-nav {
@@ -63,6 +94,14 @@ ul.main-nav li a:hover {
     flex-grow: 1;
 }
 
+/* Sidebar Lists */
+
+aside > ul {
+    list-style: none;
+    padding: 0;
+}
+
+
 /* GRID */
 .grid, .grid-single > * {
     background-color: rgb(255, 255, 255);
@@ -84,7 +123,7 @@ grid-area: aside;
 
 .grid { /* Mobile First */
     display: grid;
-    gap: 20px;
+    gap: 3.5rem;
     grid-template-areas:
         "main"
         "section"
@@ -93,7 +132,7 @@ grid-area: aside;
 
 .grid-single { /* Page / Single */
     display: grid;
-    gap: 20px;
+    gap: 3.5rem;
     grid-template-areas:
         "section";
 }
@@ -115,7 +154,7 @@ img {
 
 a:link, a:active, a:hover, a:visited {
     color:rgb(63, 159, 248);
-    text-decoration: none;
+    text-decoration-thickness: 2px;
 }
 
 a:hover {
@@ -124,35 +163,19 @@ a:hover {
 }
 
 /* Older posts */
-.container-oldposts {
-    position: relative;
-  }
-  
-  .bottom-left {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    width: 325px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: .25rem;
-    padding: .25rem;
-  }
 
 
-@media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .grid {
-        max-width: 1024px;
-        margin: 0 auto;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-areas:
-        "main main aside"
-        "section section aside"
+        max-width: 1280px;
+
     }
   }
 
+
   @media screen and (min-width:769px){ 
     .grid {
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 5fr 2fr;
         grid-template-areas:
         "nav nav"
         "main aside"
