@@ -19,10 +19,7 @@
 }
 
 html, body {
-    background-color: #faf8f9;
-    opacity: 1;
-    background: radial-gradient(circle, transparent 20%, #faf8f9 20%, #faf8f9 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #faf8f9 20%, #faf8f9 80%, transparent 80%, transparent) 27.5px 27.5px, linear-gradient(#f7a4c5 2.2px, transparent 2.2px) 0 -1.1px, linear-gradient(90deg, #f7a4c5 2.2px, #faf8f9 2.2px) -1.1px 0;
-    background-size: 55px 55px, 55px 55px, 27.5px 27.5px, 27.5px 27.5px;
+    background-color: #f8f3f3;
     font-family: "Lucida Console", "Courier New", monospace;
     line-height: 1.75;
 }
@@ -38,6 +35,8 @@ p {
     margin: 0 auto;
     padding: 0 1.5rem;
     clear: both;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
   }
 
 /* TEXT & FONTS */
@@ -125,7 +124,7 @@ grid-area: aside;
 }
 
 .grid { /* Mobile First */
-    margin-top: 4rem;
+    margin-top: 1rem;
     display: grid;
     gap: 3.5rem;
     grid-template-areas:
@@ -135,7 +134,7 @@ grid-area: aside;
 }
 
 .grid-single { /* Page / Single */
-    margin-top: 4rem;
+    margin-top: 1rem;
     display: grid;
     gap: 3.5rem;
     grid-template-areas:
@@ -181,7 +180,6 @@ a:hover {
 .oldposts-info p {
     margin: 0;
     font-size: small;
-    border-bottom: 1px dashed black;
 }
 
 .oldposts-item {
@@ -189,6 +187,7 @@ a:hover {
     margin-bottom: 4rem;
     padding: 2rem;
     border-radius: .25rem;
+    border: 1px solid #e0e0e0;
 }
 
 /* FOOTER */
