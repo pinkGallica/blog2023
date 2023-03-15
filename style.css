@@ -19,7 +19,10 @@
 }
 
 html, body {
-    background-color: #ffffff;
+    background-color: #faf8f9;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #faf8f9 20%, #faf8f9 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #faf8f9 20%, #faf8f9 80%, transparent 80%, transparent) 27.5px 27.5px, linear-gradient(#f7a4c5 2.2px, transparent 2.2px) 0 -1.1px, linear-gradient(90deg, #f7a4c5 2.2px, #faf8f9 2.2px) -1.1px 0;
+    background-size: 55px 55px, 55px 55px, 27.5px 27.5px, 27.5px 27.5px;
     font-family: "Lucida Console", "Courier New", monospace;
     line-height: 1.75;
 }
@@ -122,6 +125,7 @@ grid-area: aside;
 }
 
 .grid { /* Mobile First */
+    margin-top: 4rem;
     display: grid;
     gap: 3.5rem;
     grid-template-areas:
@@ -131,6 +135,7 @@ grid-area: aside;
 }
 
 .grid-single { /* Page / Single */
+    margin-top: 4rem;
     display: grid;
     gap: 3.5rem;
     grid-template-areas:
@@ -146,8 +151,8 @@ img {
 
 .featured-media img { 
 	max-width: 350px;
-	margin: 0 auto; 
-	border-radius: 1rem;
+	margin: 0 auto;
+    border-radius: .25rem;
 }
 
 /* LINKS */
@@ -163,7 +168,35 @@ a:hover {
 }
 
 /* Older posts */
+    /* FLEX */
+    .container-oldposts {
+        display: flex;
+        flex-flow: row wrap;
+    }
 
+.oldposts-info {
+
+}
+
+.oldposts-info p {
+    margin: 0;
+    font-size: small;
+    border-bottom: 1px dashed black;
+}
+
+.oldposts-item {
+    background-color: rgb(252, 246, 246);
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: .25rem;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
 
   @media (min-width: 1280px) {
     .grid {
@@ -175,7 +208,7 @@ a:hover {
 
   @media screen and (min-width:769px){ 
     .grid {
-        grid-template-columns: 5fr 2fr;
+        grid-template-columns: 3fr 1fr;
         grid-template-areas:
         "nav nav"
         "main aside"
